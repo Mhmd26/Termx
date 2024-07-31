@@ -6,12 +6,15 @@ import os
 
 CHANNEL_ID = '@Scorpion_scorp'  # استبدل باسم قناتك
 
+
 # وظيفة للتحقق من الاشتراك
 async def check_subscription(user_id):
     try:
         chat_member = await app.get_chat_member(CHANNEL_ID, user_id)
+        print(f"User {user_id} status: {chat_member.status}")  # رسالة تشخيصية
         return chat_member.status in ['member', 'administrator', 'creator']
-    except Exception:
+    except Exception as e:
+        print(f"Error checking subscription for user {user_id}: {e}")  # رسالة تشخيصية
         return False  # إذا حدث خطأ، المستخدم غير مشترك
 
 @Anony.on_message(filters.command("start") & filters.private & filters.incoming)
