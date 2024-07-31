@@ -3,10 +3,11 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from StringGen import Anony
 from StringGen.utils import add_served_user, keyboard
 
-API_TOKEN = '7360356871:AAE6IYZH2gfGOe4cG2CM1UxRn90ATjLkvJE'
-CHANNEL_ID = '@Scorpion_scorp'  # استبدل باسم قناتك
+# استبدل باسم قناتك
+CHANNEL_ID = '@Scorpion_scorp'
 
-app = Client("my_bot", bot_token=API_TOKEN)
+# نفترض أن إعدادات Client تحتوي بالفعل على API_TOKEN
+app = Client("my_bot")
 
 # وظيفة للتحقق من الاشتراك
 async def check_subscription(user_id):
