@@ -9,27 +9,27 @@
     "env": {
       "API_ID": {
         "description": "ايبي ايدي",
-        "value": "23970174",
+        "value": "23452838",
         "required": true
       },
       "API_HASH": {
         "description": "ايبي هاش",
-        "value": "f1db2e38b2c73448ef09c504187e888d",
+        "value": "48333ea197122c79561e1321a0687076",
         "required": true
       },
       "BOT_TOKEN": {
         "description": "توكن البوت",
-        "value": "7365923851:AAGlgzoywP0I1imV97WN7eEdkCt6_imWi_E",
+        "value": "7360356871:AAE6IYZH2gfGOe4cG2CM1UxRn90ATjLkvJE",
         "required": true
       },
       "OWNER_ID": {
         "description": "ايدي المالك",
-        "value": "815010872",
+        "value": "7275336620",
         "required": true
       },
       "MONGO_DB_URI": {
         "description": "رابط كود مونجو",
-        "value": "",
+        "value": "mongodb+srv://Hamodey2006:Hamodey2006@cluster0.xilnp5n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
         "required": true
       }
     },
