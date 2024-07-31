@@ -2,22 +2,19 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from StringGen import Anony
 from StringGen.utils import add_served_user, keyboard
+import os
 
-# استبدل باسم قناتك
-CHANNEL_ID = '@Scorpion_scorp'
-
-# نفترض أن إعدادات Client تحتوي بالفعل على API_TOKEN
-app = Client("my_bot")
+CHANNEL_ID = '@Scorpion_scorp'  # استبدل باسم قناتك
 
 # وظيفة للتحقق من الاشتراك
 async def check_subscription(user_id):
     try:
         chat_member = await app.get_chat_member(CHANNEL_ID, user_id)
         return chat_member.status in ['member', 'administrator', 'creator']
-    except Exception as e:
+    except Exception:
         return False  # إذا حدث خطأ، المستخدم غير مشترك
 
-@app.on_message(filters.command("start") & filters.private & filters.incoming)
+@Anony.on_message(filters.command("start") & filters.private & filters.incoming)
 async def f_start(_, message: Message):
     user_id = message.from_user.id
 
@@ -32,7 +29,10 @@ async def f_start(_, message: Message):
         return
 
     await message.reply_text(
-        text=f"""</b>المستخدم</b> | {message.from_user.first_name}\n</b>مرحبا بك فـي بـوت اسـتـخـراج جلسات العقرب 😁 </b>\n\n</b>✎┊‌ يمكنك استـخـراج التالـي </b>\n</b>✎┊‌ تـلـيـثـون </b>\n</b>✎┊‌ بايـروجـرام </b>\n\n</b>- لبدء الاستخراج اضغط Start bot</b>\n</b>- لمعرفة كيفية الاستخراج اضغط Order bot</b>\n\n</b>✎┊‌ تم انشاء البوت بواسطة: \n @Zo_r0 | @I_e_e_l </b>""",
+        text=f"""</b>المستخدم</b> | {message.from_user.first_name}\n</b>مرحبا بك فـي بـوت اسـتـخـراج جلسات العقرب 😁 </b>\n
+</b>✎┊‌ يمكنك استـخـراج التالـي </b>\n</b>✎┊‌ تـلـيـثـون </b>\n</b>✎┊‌ بايـروجـرام </b>\n
+</b>- لبدء الاستخراج اضغط Start bot</b>\n</b>- لمعرفة كيفية الاستخراج اضغط Order bot</b>\n
+</b>✎┊‌ تم انشاء البوت بواسطة: \n @Zo_r0 | @I_e_e_l </b>""",
         reply_markup=keyboard,
         disable_web_page_preview=True,
     )
