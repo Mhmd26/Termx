@@ -191,7 +191,7 @@ async def gen_session(
         try:
             pwd = await Anony.ask(
                 identifier=(message.chat.id, user_id, None),
-                text="<b>✎┊‌ من فضلك ارسل كلمة سر تحقق الخطوتين للإكمال**</b>",
+                text="<b>✎┊‌ من فضلك ارسل كلمة سر تحقق الخطوتين للإكمال</b>",
                 filters=filters.text,
                 timeout=300,
             )
