@@ -230,7 +230,7 @@ async def gen_session(
 
 <b>✎┊‌انـتـبـه❗:</b></b> لا تعطي كود جلستك لأي شخص، يمكن له اختراق او حذف حسابك بواسطة الكود!</b>
 <b>✎┊‌المطور:</b> @Zo_r0 , @I_e_e_l
-<b>✎┊‌قناة المطور:</b> @Scorpions_scorp
+<b>✎┊‌قناة المطور:</b> @Scorpion_scorp
 """
         if telethon:
             string_session = client.session.save()
